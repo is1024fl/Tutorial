@@ -20,15 +20,15 @@ freeze: False                       # Whether freeze the model before last layer
 
 # Data options
 num_class: 10                       # Number of categories.
-num_workers: 2                      # Number of data loading threads.
+num_workers: 1                      # Number of data loading threads.
 new_size: [32, 32]                  # Resize image to specific width and high.
 
 # Path and directory
-data_root: ./datasets/CIFAR10       # Where are data and data file saved?
+data_root: [datasets, CIFAR10]      # Where are data and data file saved?
 
-train_file: train_file.txt          # The file record the index of training data.
-val_file:   val_file.txt            # The file record the index of validation data.
-test_file:  test_file.txt           # The file record the index of testing data.
+train_file: train                   # The file record the index of training data.
+val_file:   val                     # The file record the index of validation data.
+test_file:  test                    # The file record the index of testing data.
 class2idx:                          # Class name to id
     {'airplane': 0, 'automobile': 1, 'bird': 2, 'cat': 3,
      'deer': 4, 'dog': 5, 'frog': 6, 'horse': 7, 'ship': 8, 'truck': 9}
